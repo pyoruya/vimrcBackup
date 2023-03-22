@@ -1,13 +1,14 @@
 set nocompatible
 filetype off
 syntax on
-color torte
+color molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 set ru
 set sc
 set vb
 set cul
-
 set number                " 좌측 라인 넘버 표시
 set numberwidth=6        " 넘버 표시 공간의 너비
 set title                " 하단 편집 문서의 이름 표시
@@ -20,14 +21,11 @@ set autoindent            " 자동 들여쓰기
 set smartindent
 set hlsearch            " 검색 결과 강조
 set incsearch            " 증가 방향으로 검색<F9>:q:
-"set nowrapscan            " 검색 시 파일 끝에서 되돌려 검색하지 않게
 set nowrap                " 자동 줄 바꿈 사용하지 않음
 set autowrite            " 자동 저장
 set autoread         
 set lines=50 columns=150
 set tags=./tags,tags,../tags,../../tags;
-
-nmap <F9> : NERDTreeToggle<CR>
 
 filetype off
 set shellslash
@@ -36,7 +34,7 @@ call vundle#begin('~/vimfiles/bundle')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Tagbar'
+Plugin 'majutsushi/tagbar'
 Plugin 'craigemery/vim-autotag'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,12 +51,16 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+
+"============ Installed Plugin Configuration ==========
 nmap <leader>t :TagbarToggle<CR>
 let g:tagbar_width=40
 let g:tagbar_autofocus=1
 let g:tagbar_autoclose=0
 "let g:tagbar_iconchars
 let g:tagbar_systemenc = 'utf-8'
+
+nmap <F9> : NERDTreeToggle<CR>
 
 "============== 주석 매크로 ==============
 func! CmtOn()    "주석 on
