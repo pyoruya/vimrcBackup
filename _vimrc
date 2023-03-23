@@ -27,6 +27,10 @@ set autoread
 set nocompatible
 set lines=50 columns=150
 
+set syntax=c
+"set syn=cpp_conditional
+"hi cppUndefined ctermbg=gray
+
 "set clipboard=unnamedplus   "vim 의 기본 클립보드가 system 클립보드로 변경
 set tags=./tags,tags,../tags,../../tags;
 
@@ -40,6 +44,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'craigemery/vim-autotag'
 Plugin 'tpope/vim-fugitive'
+Plugin 'junegunn/limelight.vim'
+Plugin 'chriskempson/base16-vim'
+Plugin 'antlypls/vim-colors-codeschool'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -78,4 +85,4 @@ vmap <c-x> <esc>:call CmtOff() <cr>
 nmap <c-c> <esc>v:call CmtOn() <cr>
 nmap <c-x> <esc>v:call CmtOff() <cr>
 
-
+let base16colorspace=256  " Access colors present in 256 colorspace
