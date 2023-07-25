@@ -1,8 +1,4 @@
 syntax on
-color molokai
-let g:molokai_original = 1
-let g:rehash256 = 1
-
 set sc                  " showcmd
 set vb                  " visualbell
 set cul
@@ -47,6 +43,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/limelight.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'antlypls/vim-colors-codeschool'
+Plugin 'mileszs/ack.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -86,3 +83,18 @@ nmap <c-c> <esc>v:call CmtOn() <cr>
 nmap <c-x> <esc>v:call CmtOff() <cr>
 
 let base16colorspace=256  " Access colors present in 256 colorspace
+
+"color base16-nord
+"color base16-gruvbox-dark-hard
+"color base16-tomorrow-night
+"color base16-oceanicnext
+"color base16-dracula
+color base16-woodland
+"color base16-ashes
+"color codeschool 
+"color base16-xcode-dusk 
+"let g:molokai_original = 1
+"let g:rehash256 = 1
+
+highlight Normal ctermbg=0 guibg=black
+
